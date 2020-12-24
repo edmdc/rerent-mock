@@ -3,6 +3,7 @@ module.exports = {
     title: "ReRent Mock",
   },
   plugins: [
+    "gatsby-plugin-typescript",
     "gatsby-plugin-emotion",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
