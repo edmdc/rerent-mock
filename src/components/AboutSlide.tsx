@@ -18,14 +18,14 @@ const AboutSlide = ({
   reverse,
 }: AboutSlideProps): JSX.Element => {
   return (
-    <article>
+    <article css={tw`mt-10 flex flex-nowrap max-w-full`}>
       {!reverse && (
         <div>
           <h4>{title}</h4>
           <p>{content}</p>
         </div>
       )}
-      <img src={imgSrc} alt={imgAlt} />
+      <img src={imgSrc} alt={imgAlt} css={tw`w-3/4`} />
       {reverse && (
         <div>
           <h4>{title}</h4>
