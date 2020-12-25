@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         heading: 'Comfortaa',
       },
+      colors: {
+        primary: '#06170e',
+      },
     },
   },
   variants: {

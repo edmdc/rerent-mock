@@ -3,16 +3,16 @@ import Layout from '../components/Layout';
 import tw from 'twin.macro';
 
 const Banner = tw.div`
-  h-96 bg-green-900 flex flex-col content-center font-heading
+  h-96 bg-primary flex flex-col content-center font-heading
   justify-center text-center text-white
 `;
 
 const H1 = tw.h1`
-  text-8xl
+  text-8xl my-3
 `;
 
 const H3 = tw.h3`
-  text-6xl max-w-sm self-center
+  text-5xl max-w-3xl self-center my-3
 `;
 
 // markup
