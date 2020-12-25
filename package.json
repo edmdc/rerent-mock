@@ -17,6 +17,7 @@
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@fontsource/comfortaa": "^4.0.1",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-react-helmet": "^3.7.0",

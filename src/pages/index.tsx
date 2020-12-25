@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import tw from 'twin.macro';
 
 const Banner = tw.div`
-  h-96 bg-green-900 flex flex-col content-center
+  h-96 bg-green-900 flex flex-col content-center font-heading
   justify-center text-center text-white
 `;
 
