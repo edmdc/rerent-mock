@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import tw from 'twin.macro';
 
 interface AboutSlideProps {
-  imgUrl: string;
+  imgSrc: string;
   imgAlt: string;
   title: string;
   content: string;
@@ -11,7 +11,7 @@ interface AboutSlideProps {
 }
 
 const AboutSlide = ({
-  imgUrl,
+  imgSrc,
   imgAlt,
   title,
   content,
@@ -25,7 +25,7 @@ const AboutSlide = ({
           <p>{content}</p>
         </div>
       )}
-      <img src={imgUrl} alt={imgAlt} />
+      <img src={imgSrc} alt={imgAlt} />
       {reverse && (
         <div>
           <h4>{title}</h4>
