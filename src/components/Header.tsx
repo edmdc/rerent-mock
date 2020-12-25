@@ -25,7 +25,7 @@ const Logo = (): JSX.Element => (
 const Header = (): JSX.Element => {
   return (
     <header
-      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-16 content-center justify-between py-2`}
+      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-16 content-center justify-between py-2 fixed`}
     >
       <div css={tw`flex mx-3`}>
         <Logo />
@@ -46,4 +46,3 @@ const Header = (): JSX.Element => {
 };
 
 export default Header;
-
