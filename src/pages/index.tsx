@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import AboutSlide from '../components/AboutSlide';
+import { H1, H3 } from '../components/common/headings';
 import tw from 'twin.macro';
 import livingRoom from '../images/rerent-living-room.svg';
 import diningRoom from '../images/dining-room.svg';
@@ -8,14 +9,6 @@ import diningRoom from '../images/dining-room.svg';
 const Banner = tw.div`
   h-96 bg-primary flex flex-col content-center font-heading
   justify-center text-center text-white
-`;
-
-const H1 = tw.h1`
-  text-8xl my-3
-`;
-
-const H3 = tw.h3`
-  text-5xl max-w-3xl self-center my-3
 `;
 
 // markup
