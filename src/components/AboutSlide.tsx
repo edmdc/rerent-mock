@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/react';
 import tw from 'twin.macro';
 
+import { H4 } from './common/headings';
+
 interface AboutSlideProps {
   imgSrc: string;
   imgAlt: string;
@@ -20,15 +22,15 @@ const AboutSlide = ({
   return (
     <article css={tw`mt-10 flex flex-nowrap max-w-full`}>
       {!reverse && (
-        <div>
-          <h4>{title}</h4>
+        <div css={tw`mx-5`}>
+          <H4>{title}</H4>
           <p>{content}</p>
         </div>
       )}
-      <img src={imgSrc} alt={imgAlt} css={tw`w-3/4`} />
+      <img src={imgSrc} alt={imgAlt} css={tw`w-2/3 px-8`} />
       {reverse && (
-        <div>
-          <h4>{title}</h4>
+        <div css={tw`mx-5`}>
+          <H4>{title}</H4>
           <p>{content}</p>
         </div>
       )}
