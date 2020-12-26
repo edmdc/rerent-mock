@@ -1,4 +1,5 @@
-import React from 'react';
+/* @jsx jsx */
+import { jsx } from '@emotion/react';
 import Header from './Header';
 
 interface LayoutProps {
@@ -15,4 +16,3 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 };
 
 export default Layout;
-

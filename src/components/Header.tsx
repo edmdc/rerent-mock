@@ -16,7 +16,7 @@ const Logo = (): JSX.Element => (
     <text x="16.5" y="9.5" rotate="180">
       R
     </text>
-    <text x="13.5" y="19.5">
+    <text x="14" y="19.5">
       R
     </text>
   </svg>
@@ -25,15 +25,15 @@ const Logo = (): JSX.Element => (
 const Header = (): JSX.Element => {
   return (
     <header
-      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-16 content-center justify-between py-2 fixed`}
+      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-14 content-center justify-between py-2 fixed z-20 min-w-full`}
     >
       <div css={tw`flex mx-3`}>
         <Logo />
-        <a href="#how" css={tw`hover:text-white mx-2`}>
+        <a href="#how" css={tw`hover:text-white mx-2 py-2`}>
           How it Works
         </a>
       </div>
-      <nav>
+      <nav css={tw`py-2 mx-3`}>
         <Link to="/login" css={tw`m-2 hover:text-white`}>
           Login
         </Link>
