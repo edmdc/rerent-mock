@@ -1,15 +1,15 @@
 import tw from 'twin.macro';
 
 export const H1 = tw.h1`
-  text-8xl my-4
+  text-8xl my-6
 `;
 
 export const H2 = tw.h2`
-  text-6xl my-3
+  text-6xl my-5
 `;
 
 export const H3 = tw.h3`
-  text-5xl my-3
+  text-5xl my-4
 `;
 
 export const H4 = tw.h4`
