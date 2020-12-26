@@ -25,7 +25,7 @@ const Logo = (): JSX.Element => (
 const Header = (): JSX.Element => {
   return (
     <header
-      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-14 content-center justify-between py-2 fixed z-20 min-w-full`}
+      css={tw`bg-primary text-gray-300 text-opacity-75 flex h-14 content-center justify-between py-2 fixed top-0 z-20 min-w-full`}
     >
       <div css={tw`flex mx-3`}>
         <Logo />
@@ -33,7 +33,7 @@ const Header = (): JSX.Element => {
           How it Works
         </a>
       </div>
-      <nav css={tw`py-2 mx-3`}>
+      <nav css={tw`py-2 mx-2`}>
         <Link to="/login" css={tw`m-2 hover:text-white`}>
           Login
         </Link>
