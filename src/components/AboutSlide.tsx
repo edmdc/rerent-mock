@@ -20,7 +20,7 @@ const AboutSlide = ({
   reverse,
 }: AboutSlideProps): JSX.Element => {
   return (
-    <article css={tw`mt-10 flex flex-nowrap max-w-full`}>
+    <article css={tw`my-10 mx-auto flex flex-nowrap max-w-7xl`}>
       {!reverse && (
         <div css={tw`mx-5`}>
           <H4>{title}</H4>
