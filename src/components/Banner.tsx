@@ -8,6 +8,7 @@ import { H1, H3 } from '../components/common/headings';
 // use within CSS-in-JS. Here's the Basic Syntax:
 const SimpleButton = tw.button`bg-transparent rounded border
   py-2 px-3 mt-8 font-heading hover:bg-white hover:text-primary
+  transform duration-200 ease-in hover:scale-110
 `;
 
 // Twin.macro also allows for quick Tailwind overrides by
