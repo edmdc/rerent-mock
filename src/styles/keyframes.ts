@@ -36,4 +36,26 @@ export const fadeIn = {
       opacity: 1;
     }
   `,
+  left: keyframes`
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    100% {
+      tansform: translate(0%);
+      opacity: 1;
+    }
+  `,
+  right: keyframes`
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    100% {
+      tansform: translate(0%);
+      opacity: 1;
+    }
+  `,
 };

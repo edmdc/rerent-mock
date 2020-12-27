@@ -25,15 +25,11 @@ const IndexPage = (): JSX.Element => {
         stop2 = topPos(ref2.current);
       if (stop0 && stop0 <= scrollPos) {
         toggleDisplay((display) => ({ ...display, 0: true }));
-        console.log(`Element Top: ${stop0}`, `Scroll: ${scrollPos}`);
       } else if (stop1 && stop1 < scrollPos) {
         toggleDisplay((display) => ({ ...display, 1: true }));
-        console.log('stop1', stop1 < scrollPos);
       } else if (stop2 && stop2 < scrollPos) {
         toggleDisplay((display) => ({ ...display, 2: true }));
-        console.log('stop2', stop2 < scrollPos);
       }
-      console.log(display);
     };
 
     window.addEventListener('scroll', onScroll);
