@@ -11,25 +11,26 @@ import { fadeIn } from '../styles/keyframes';
 // markup
 const IndexPage = (): JSX.Element => {
   const [display, toggleDisplay] = useState({ 0: false, 1: false, 2: false });
-  const ref0 = useRef(null),
-    ref1 = useRef(null),
-    ref2 = useRef(null);
+  const ref0 = useRef(null);
+  // ref1 = useRef(null),
+  // ref2 = useRef(null);
 
   useLayoutEffect(() => {
     const topPos = (el: any): number => el.getBoundingClientRect().top;
 
     const onScroll = (): void => {
       const scrollPos = window.screenY + window.innerHeight;
-      const stop0 = topPos(ref0.current),
-        stop1 = topPos(ref1.current),
-        stop2 = topPos(ref2.current);
+      const stop0 = topPos(ref0.current);
+      // stop1 = topPos(ref1.current),
+      // stop2 = topPos(ref2.current);
       if (stop0 && stop0 <= scrollPos) {
         toggleDisplay((display) => ({ ...display, 0: true }));
-      } else if (stop1 && stop1 < scrollPos) {
-        toggleDisplay((display) => ({ ...display, 1: true }));
-      } else if (stop2 && stop2 < scrollPos) {
-        toggleDisplay((display) => ({ ...display, 2: true }));
       }
+      // else if (stop1 && stop1 < scrollPos) {
+      //   toggleDisplay((display) => ({ ...display, 1: true }));
+      // } else if (stop2 && stop2 < scrollPos) {
+      //   toggleDisplay((display) => ({ ...display, 2: true }));
+      // }
     };
 
     window.addEventListener('scroll', onScroll);
@@ -38,10 +39,17 @@ const IndexPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <div ref={ref2}>
-        <Banner />
-      </div>
-      <div ref={ref1}>
+      <Banner />
+      <div
+        css={[
+          css`
+            opacity: 0;
+            animation: ${fadeIn.right} 1.3s ease-in-out;
+            animation-delay: 600ms;
+            animation-fill-mode: forwards;
+          `,
+        ]}
+      >
         <AboutSlide
           imgSrc={livingRoom}
           imgAlt="A bright, welcoming living room"
@@ -52,13 +60,15 @@ const IndexPage = (): JSX.Element => {
       </div>
       <div
         ref={ref0}
-        css={
+        css={[
           display[0] &&
-          css`
-            animation: ${fadeIn.top} 1s ease-in;
-            animation-delay: 1s;
-          `
-        }
+            css`
+              opacity: 0;
+              animation: ${fadeIn.left} 1.3s ease-in-out;
+              animation-delay: 200ms;
+              animation-fill-mode: forwards;
+            `,
+        ]}
       >
         <AboutSlide
           imgSrc={diningRoom}
