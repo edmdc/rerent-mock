@@ -45,7 +45,7 @@ const IndexPage = (): JSX.Element => {
           css`
             opacity: 0;
             animation: ${fadeIn.right} 1.3s ease-in-out;
-            animation-delay: 600ms;
+            animation-delay: 300ms;
             animation-fill-mode: forwards;
           `,
         ]}
@@ -60,15 +60,18 @@ const IndexPage = (): JSX.Element => {
       </div>
       <div
         ref={ref0}
-        css={[
-          display[0] &&
-            css`
-              opacity: 0;
-              animation: ${fadeIn.left} 1.3s ease-in-out;
-              animation-delay: 200ms;
-              animation-fill-mode: forwards;
-            `,
-        ]}
+        css={
+          display[0]
+            ? css`
+                opacity: 0;
+                animation: ${fadeIn.left} 1.3s ease-in-out;
+                animation-delay: 200ms;
+                animation-fill-mode: forwards;
+              `
+            : css`
+                opacity: 0;
+              `
+        }
       >
         <AboutSlide
           imgSrc={diningRoom}
